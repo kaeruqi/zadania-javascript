@@ -1,1 +1,1 @@
-# zadania-16.09.26
+# zadania-javascript
