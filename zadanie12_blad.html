@@ -1,0 +1,35 @@
+<html>
+<body>
+
+<div style="color:green;font-size:51px;">
+<script language="JavaScript">
+
+var D1_blad = prompt("Dzień 1 =", "");
+var G1_blad = prompt("Godzina 1 =", "");
+var D2_blad = prompt("Dzień 2 =", "");
+var G2_blad = prompt("Godzina 2 =", "");
+
+var D1 = parseFloat(D1_blad);
+var G1 = parseFloat(G1_blad);
+var D2 = parseFloat(D2_blad);
+var G2 = parseFloat(G2_blad);
+
+var sekund;
+
+sekund = ((D1 - D2) * 24 + (G1 - G2)) * 60 * 60;
+
+document.write("D1 = " + D1 + "<br>");
+document.write("G1 = " + G1 + "<br>");
+document.write("D2 = " + D2 + "<br>");
+document.write("G2 = " + G2 + "<br>");
+document.write("Ilość sekund = " + sekund + " sekund<br>");
+
+function okno_zamknij_blad() { window.close(); }
+
+</script>
+</div>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_blad()"/>
+
+</body>
+</html>

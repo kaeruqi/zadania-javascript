@@ -1,0 +1,38 @@
+<textarea cols="90" rows="60">
+    <html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>  
+<script language="JavaScript">
+    var liczba1_blad = prompt("Podaj pierwszą liczbę A=", "");
+    var a = parseFloat(liczba1_blad);
+    var liczba2_blad = prompt("Podaj drugą liczbę B=", "");
+    var b = parseFloat(liczba2_blad);
+
+    var wynik =(a+b)*(a+b)*(a+b);
+    var a3=a*a*a;
+    var b3=b*b*b ;
+    var a2b=3*a*a*b;
+    var ab2=3*a*b*b;
+
+    document.write("<div style='color:navy; font-size:51px;'>");
+    document.write("wczytane liczby: A=" + a + " B=" + b + "<br>");
+    document.write(
+        "("+a+"+"+b+")^3="+
+        a+"^3+3*("+a+")^2*("+b+")+"+
+        "3*("+a+")*(("+b+")^2)+"+
+        b+"^3="+
+        a3+"+"+a2b+"+"+ab2+"+"+b3+
+        "="+wynik
+    );
+    document.write("</div>");
+    function okno_zamknij_blad() {window.close();}
+
+</script>
+<br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_blad()">
+
+</body>
+</html>
+</textarea>
