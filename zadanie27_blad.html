@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ZAd 27</title>
+    <script language="JavaScript">
+    function Wys_bla(odl_bla, s_bla) {
+        odl_bla = parseFloat(document.getElementsByName('odl_dana_bla')[0].value);
+        s_bla = parseFloat(document.getElementsByName('s_dana_bla')[0].value);
+            
+        var h_wynik_bla = Math.sqrt((s_bla * s_bla) - (odl_bla * odl_bla));
+        document.getElementsByName('h_wynik_bla')[0].value = h_wynik_bla.toFixed(2);
+        alert("Wysokość h = " + h_wynik_bla.toFixed(2) + " m");
+    }
+        
+    function Kat_bla(odl_bla, s_bla) {
+        odl_bla = parseFloat(document.getElementsByName('odl_dana_bla')[0].value);
+        s_bla = parseFloat(document.getElementsByName('s_dana_bla')[0].value);
+            
+        var kat_wynik_bla = Math.acos(odl_bla / s_bla) * (180 / Math.PI);
+        document.getElementsByName('kat_wynik_bla')[0].value = kat_wynik_bla.toFixed(2);
+        alert("Kąt startu = " + kat_wynik_bla.toFixed(2) + "°");
+    }
+    </script>
+</head>
+<body>
+    <br>
+    <form onsubmit="Wys_bla(); Kat_bla(); return false;">
+        Podaj odleglosc odl = <input size="6" name="odl_dana_bla"><br><br>
+        Podaj droge samolotu s = <input size="6" name="s_dana_bla">
+        <br><br><input type="submit" value="Oblicz"><br><br>
+        Wysokosc h = <input size="6" name="h_wynik_bla"><br><br>
+        Kąt startu kat = <input size="6" name="kat_wynik_bla">
+    </form>
+</body>
+</html>

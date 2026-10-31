@@ -1,0 +1,44 @@
+<textarea cols="70" rows="80">
+    
+<html>
+<head>
+    <title>Obliczanie pola i obwodu prostokąta</title>
+
+    <script language="JavaScript">
+        function pole_bla(a_bla, b_bla) {
+            a_bla = parseFloat(document.getElementsByName('a_dana_bla')[0].value);
+            b_bla = parseFloat(document.getElementsByName('b_dana_bla')[0].value);
+            var pole_wynik_bla = a_bla * b_bla;
+            document.getElementsByName('pole')[0].value = pole_wynik_bla.toFixed(2);
+            alert("Pole = " + pole_wynik_bla.toFixed(2) + " cm^2");
+        }
+        function obwod_bla(a_bla, b_bla) {
+            a_bla = parseFloat(document.getElementsByName('a_dana_bla')[0].value);
+            b_bla = parseFloat(document.getElementsByName('b_dana_bla')[0].value);
+            var obwod_wynik_bla = 2 * a_bla + 2 * b_bla;
+            document.getElementsByName('obwod')[0].value = obwod_wynik_bla.toFixed(2);
+            alert("Obwód = " + obwod_wynik_bla.toFixed(2) + " cm");
+        }
+    </script>
+</head>
+<body>
+    Obliczanie pola i obwodu prostokąta
+    <br><br>
+    <form onsubmit="pole_bla(); obwod_bla(); return false;">
+        Podaj a =
+        <input size="6" name="a_dana_bla">
+        Podaj b =
+        <input size="6" name="b_dana_bla">
+        <br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Obwód =
+        <input size="6" name="obwod">
+        <br><br>
+        Pole =
+        <input size="6" name="pole">
+    </form>
+</body>
+</html>
+
+</textarea>

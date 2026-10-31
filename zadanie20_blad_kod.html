@@ -1,0 +1,78 @@
+<textarea cols="70" rows="60">
+    
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript">
+
+function AB_bla()
+{
+    var A_x = parseFloat(document.getElementById('A_x').value);
+    var A_y = parseFloat(document.getElementById('A_y').value);
+    var B_x = parseFloat(document.getElementById('B_x').value);
+    var B_y = parseFloat(document.getElementById('B_y').value);
+    var AB = Math.sqrt(
+        (B_x - A_x) * (B_x - A_x) +
+        (B_y - A_y) * (B_y - A_y)
+    );
+    document.getElementById("nazwa").innerHTML =
+        "Długość boku AB = " + AB.toFixed(2);
+}
+function AC_bla()
+{
+    var A_x = parseFloat(document.getElementById('A_x').value);
+    var A_y = parseFloat(document.getElementById('A_y').value);
+    var C_x = parseFloat(document.getElementById('C_x').value);
+    var C_y = parseFloat(document.getElementById('C_y').value);
+    var AC = Math.sqrt(
+        (C_x - A_x) * (C_x - A_x) +
+        (C_y - A_y) * (C_y - A_y)
+    );
+    document.getElementById("nazwa").innerHTML =
+        "Długość boku AC = " + AC.toFixed(2);
+}
+function BC_bla()
+{
+    var B_x = parseFloat(document.getElementById('B_x').value);
+    var B_y = parseFloat(document.getElementById('B_y').value);
+    var C_x = parseFloat(document.getElementById('C_x').value);
+    var C_y = parseFloat(document.getElementById('C_y').value);
+
+    var BC = Math.sqrt(
+        (C_x - B_x) * (C_x - B_x) +
+        (C_y - B_y) * (C_y - B_y)
+    );
+
+    document.getElementById("nazwa").innerHTML =
+        "Długość boku BC = " + BC.toFixed(2);
+}
+
+</script>
+
+Podaj współrzędną x punktu A:
+<input type="text" id="A_x"><br><br>
+Podaj współrzędną y punktu A:
+<input type="text" id="A_y"><br><br>
+Podaj współrzędną x punktu B:
+<input type="text" id="B_x"><br><br>
+Podaj współrzędną y punktu B:
+<input type="text" id="B_y"><br><br>
+Podaj współrzędną x punktu C:
+<input type="text" id="C_x"><br><br>
+Podaj współrzędną y punktu C:
+<input type="text" id="C_y"><br><br>
+
+<input type="button" value="długość AB" onclick="AB_bla()">
+<input type="button" value="długość AC" onclick="AC_bla()">
+<input type="button" value="długość BC" onclick="BC_bla()">
+
+<br><br>
+
+<div style="color:red;font-size:50px;" id="nazwa"></div>
+
+</body>
+</html>
+
+</textarea>

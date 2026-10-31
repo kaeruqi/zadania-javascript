@@ -1,0 +1,30 @@
+<textarea cols="70" rows="40">
+<!DOCTYPE html>
+ <head>
+ <title> proste obliczenia</title>
+ <meta charset="utf-8">
+ </head>
+<body>
+<!-- <div style="color:red;font-size:50px;"> -->
+    <!-- T1/2 dla izotopu wegla C14 wynosi 5700 lat 
+    λ [1/ rok], stala rozpadu promieniotworczego (okresla prawdopodobienstwo zajscia rozpadu jednego jadra w jednostce czasu),
+    No [sztuk]-ilosc poczatkowa atomow pierwiastka rozpadu. -->
+ <script language="JavaScript">
+var No_bla=parseFloat(prompt("podaj sztuki [No] =",""));
+var t_bla=parseFloat(prompt("podaj czas [t] w latach =",""));
+var T_1_2_bla=parseFloat(prompt("Podaj czas polowicznego rozpadu [T_1_2] = ",""));
+ document.write("[t] ="+t_bla+"<br><br>");
+ document.write("[No] ="+No_bla+"<br><br>");
+ document.write(" [T_1_2] ="+T_1_2_bla+"<br><br>");  
+var lambda_bla=Math.LN2/T_1_2_bla;
+var N_bla=No_bla*Math.exp(-lambda_bla*t_bla);
+ document.write("Lambda ="+lambda_bla.toFixed(7)+"[1/rok]<br><br>");
+ document.write("N ="+N_bla.toFixed(7)+"[sztuk]<br><br>");
+
+ </script>
+<!-- </div> -->
+</body>
+</html>
+</body>
+</html>
+</textarea>

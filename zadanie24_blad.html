@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <head>
+ <title> proste obliczenia</title>
+ <meta charset="utf-8">
+ </head>
+<body>
+<!-- <div style="color:red;font-size:50px;"> -->
+ <script language="JavaScript">
+var x1_bla=prompt("pierwszy X =","");
+var x2_bla=prompt("drugi X =","");
+
+ document.write("x1 wynosi: "+x1_bla+"&nbsp&nbsp&nbsp&nbsp&nbsp x2 wynosi: "+x2_bla+"<br><br>");
+
+var x1_bla_rad=(Math.PI*x1_bla)/180;
+var x2_bla_rad=(Math.PI*x2_bla)/180;
+
+ document.write("x1_r wynosi: "+x1_bla_rad.toFixed(2)+"&nbsp&nbsp&nbsp&nbsp&nbsp x2_r wynosi: "+x2_bla_rad.toFixed(2)+"<br><br>"); 
+
+var y1_bla=3*Math.pow(x1_bla,(3/5));
+var y2_bla=2*Math.cos(x1_bla_rad)+3*Math.sin(x1_bla_rad);
+var y3_bla=Math.pow(Math.pow(x1_bla,5)+2*Math.pow(x2_bla,4),1/3)*Math.abs(x1_bla-x2_bla);
+
+ document.write("y1= "+y1_bla.toFixed(2)+"<br><br>");
+ document.write("y2= "+y2_bla.toFixed(2)+"<br><br>");
+ document.write("y3= "+y3_bla.toFixed(2)+"<br><br>");
+
+ </script>
+<!-- </div> -->
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Zad 26</title>
+    <script language="JavaScript">
+        function Pow_bla(a_bla, b_bla, h_bla) {
+            a_bla = parseFloat(document.getElementsByName('a_dana_bla')[0].value);
+            b_bla = parseFloat(document.getElementsByName('b_dana_bla')[0].value);
+            h_bla = parseFloat(document.getElementsByName('h_dana_bla')[0].value);
+            
+            var pole_wynik_bla = ((a_bla + b_bla) / 2) * h_bla;
+            document.getElementsByName('pole')[0].value = pole_wynik_bla.toFixed(2);
+            alert("Pole = " + pole_wynik_bla.toFixed(2) + " cm^2");
+        }
+        function Obw_bla(a_bla, b_bla, h_bla) {
+            a_bla = parseFloat(document.getElementsByName('a_dana_bla')[0].value);
+            b_bla = parseFloat(document.getElementsByName('b_dana_bla')[0].value);
+            h_bla = parseFloat(document.getElementsByName('h_dana_bla')[0].value);
+            
+            var x_bla = Math.abs(b_bla - a_bla) / 2;
+            var ramie_bla = Math.sqrt((x_bla * x_bla) + (h_bla * h_bla));
+            
+            var obwod_wynik_bla = a_bla + b_bla + (2 * ramie_bla);
+            document.getElementsByName('obwod')[0].value = obwod_wynik_bla.toFixed(2);
+            alert("Obwód = " + obwod_wynik_bla.toFixed(2) + " cm");
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <form onsubmit="Pow_bla(); Obw_bla(); return false;">
+        Podaj górną podstawę a = 
+        <input size="6" name="a_dana_bla">
+        <br><br>
+        Podaj dolną podstawę b = 
+        <input size="6" name="b_dana_bla">
+        <br><br>
+        Podaj wysokość h = 
+        <input size="6" name="h_dana_bla">
+        <br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Obwód = 
+        <input size="6" name="obwod">
+        <br><br>
+        Pole = 
+        <input size="6" name="pole">
+    </form>
+</body></html>
