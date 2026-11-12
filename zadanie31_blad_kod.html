@@ -1,0 +1,50 @@
+<textarea cols="100" rows="60">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 31 – Bladowski</title>
+</head>
+<body bgcolor="lightblue">
+<div style="color:red;font-size:44px;">
+<script type="text/javascript">
+var samochod = {
+    kolor: "zolty",
+    marka: "BMW",
+    model: "M3",
+    samochod_pokaz_bladowski:function()
+    {
+        document.write("Dane obiektu kolor model<br>");
+        document.write("Moje dane ==> "+this.kolor+" "+this.model);
+    }
+}
+samochod.samochod_pokaz_bladowski();
+samochod.kolor="niebieski";
+samochod.wypisz_bladowski=function()
+{
+    alert("Kolor: "+this.kolor);
+}
+samochod.wypisz_bladowski();
+</script>
+</div>
+<br>
+<div style="color:blue;font-size:46px;">
+<br>
+Mój nr. 1 i moje dane to:<br>
+Obiekt to samochod<br>
+pola:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kolor<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marka<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;model<br>
+metoda:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samochod_pokaz_bladowski();<br>
+==========================================================================<br>
+nowe pole to kolor dla obiektu samochod wartosc pola to 'niebieski'<br>
+nowa definicja metody to wypisz_bladowski(); z użyciem alert();<br>
+użycie metody wypisz_bladowski();
+</div>
+</body>
+</html>
+
+</textarea>

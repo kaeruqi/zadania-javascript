@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title size="2xl">Zadanie 32 – Bladowski</title>
+ </head>
+<body bgcolor="yellow">
+ <div style="color:green;font-size:39px;">
+ <script type="text/javascript">
+ function samochod(kolor_b,marka_b,model_b)
+{
+this.kolor=kolor_b;
+this.marka=marka_b;
+this.model=model_b;
+} 
+ samochod.prototype.wypisz = function () //definicja metody
+ {
+ alert(this.kolor + " " + this.marka+ " " + this.model);
+ };
+var auto1 = new samochod("szary", "VOLVO", "C70");
+var auto2 = new samochod("biały", "Volkswagen ", "Golf VII"); 
+auto1.wypisz(); 
+auto2.wypisz(); 
+ document.write("Moje nazwisko to Bladowski nr. 1 a obiekt to samochod"+"<br>");
+ document.write("dostęp do pól auto1 i auto2"+"<br>");
+ document.write("czyli wypisanie danych"+"<br>");
+
+document.write("samochod pierwszy =>"+" "+auto1.kolor+" "+auto1.marka+" "+auto1.model+"<br>");
+document.write("samochod pierwszy =>"+" "+auto2.kolor+" "+auto2.marka+" "+auto2.model+"<br>");
+ </script>
+</div>
+<div style="color:blue;font-size:41px;"><br>
+programowanie obiektowe:
+Słowo kluczowe prototype stosowane jest do:<br>
+stosowany przede wszystkim do realizowania dziedziczenia oraz współdzielenia metod i właściwości pomiędzy wieloma obiektami.<br>
+Słowo kluczowe new stosowane jest do:<br>
+służy do tworzenia nowych instancji obiektów na podstawie funkcji konstruktora lub klasy <br>
+</div>
+</body>
+</html>
